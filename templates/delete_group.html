@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% include "navbar.html" %}
+
+{% block content %}
+
+        <div class="container">
+
+            <div class="row mt-50">
+                <div class="col-md-8 col-md-offset-2">
+                    <h2 class="text-center heading-separator" style="color:white">Delete Group</h2>
+                    <form method="POST" action="{{ url_for('.delete_group')}}">
+                      <div class="col-sm-12">
+                          <select class="selectpicker" name="group">
+                              {% for g in groups %}
+                                  <option value="{{ g[0] }}">{{ g[0] }}</option>
+                              {% endfor %}
+                          </select>
+                      </div>
+                      <br>
+                        <div class="text-center mt-20">
+                            <button class="btn btn-green">Delete Group</button>
+                        </div>
+                    </form>
+                </div>
+            </div><
+
+
+
+
+  {% endblock %}

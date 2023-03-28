@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% include "navbar.html" %}
+
+
+{% block content %}
+<div class="col-lg-12">
+        <!-- seo fact area start -->
+        <div class="card">
+              <div class="card-body"
+                <h1>List of Groups stored in Mongo</h1>
+                <div class="data-tables datatable-dark">
+                      <table id="example" class="styled-table">
+                            <thead class="text-capitalize">
+                                <tr>
+                                    <th>Group Name</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                    {% for group in my_groups %}
+                                    <tr>
+                                        <td>{{group}}</td>
+                                    </tr>
+                                    {% endfor %}
+                                </tbody>
+                        </table>
+              </div>
+              <p><h3 style="color:white">This is a list of the Group Names stored in the mongodb</h3></p>
+
+        </div>
+</div>
+<script type="text/javascript">
+  $(document).ready(function(){$('#example').DataTable();});
+</script>
+
+
+  {% endblock %}

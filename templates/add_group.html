@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+
+{% include "navbar.html" %}
+
+{% block content %}
+
+        <div class="container">
+            <div class="row mt-50">
+                <div class="col-md-8 col-md-offset-2">
+                    <h2 class="text-center heading-separator" style="color:white">Add Group</h2>
+                    <form method="POST" action="{{ url_for('.add_group')}}">
+                        <div class="row">
+                          <div>
+                            <p style="color:red">  {{ message }}  </p>
+                          </div>
+                            <div class="col-sm-12">
+                                <div class="form-group">
+                                  <label for="group_name" style="color:white">Group Name:</label>
+                                  <input type="text" placeholder="Do Not Use Quotes" class="form-control" id="group_name" name="group_name">
+                                </div>
+                            </div>
+                            <div class="col-sm-12">
+                                <div class="form-group">
+                                  <label for="group_password" style="color:white">Group Password:</label>
+                                  <input type="password" placeholder="group_password" class="form-control" id="group_password" name="group_password">
+                                </div>
+                            </div>
+                            <!--For templates un-comment
+                            <div class="col-sm-12">
+                                <div class="form-group">
+                                  <label for="wired_template" style="color:white">Wired Template:</label>
+                                  <input type="text" placeholder="Optional" class="form-control" id="wired_template" name="wired_template">
+                                </div>
+                            </div>
+                            <div class="col-sm-12">
+                                <div class="form-group">
+                                  <label for="wireless_template" style="color:white">Wireless Template:</label>
+                                  <input type="text" placeholder="Optional" class="form-control" id="wireless_template" name="wireless_template">
+                                </div>
+                            </div>-->
+                        </div>
+                        <div class="text-center mt-20">
+                            <button class="btn btn-green">Add Group</button>
+                        </div>
+                    </form>
+                </div>
+            </div><
+
+
+
+
+  {% endblock %}

@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% include "navbar.html" %}
+
+
+
+{% block content %}
+<div class="col-lg-8">
+        <!-- seo fact area start -->
+          <div class="card">
+                <div class="card-body"
+                  <h1>List of Aruba Central Groups</h1>
+                  <div class="data-tables datatable-dark">
+                        <table id="example" class="styled-table">
+                              <thead class="text-capitalize">
+                                  <tr>
+                                      <th>Group Name</th>
+                                  </tr>
+                                  </thead>
+                                  <tbody>
+                                      {% for group in groups %}
+                                      <tr>
+                                          <td>{{group[0]}}</td>
+                                      </tr>
+                                      {% endfor %}
+                                  </tbody>
+                          </table>
+                </div>
+          </div>
+</div>
+<script type="text/javascript">
+  $(document).ready(function(){$('#example').DataTable();});
+</script>
+
+
+  {% endblock %}

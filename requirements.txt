@@ -1,0 +1,4 @@
+flask
+pytest
+PyMongo
+pycentral
